@@ -1,0 +1,64 @@
+과제 1. 
+a = [2, 3, 4, 5, 6]  
+rev_a = []  
+
+for _ in range(len(a)):
+    rev_a.append(a.pop())
+
+a = [2, 3, 4, 5, 6]  
+print("a =", a)
+print("rev_a =", rev_a
+
+과제 2.
+tup = (1, 2, 5, 4, 3, 2, 1, 4, 7, 8, 9, 9, 3, 7, 3)
+print('주어진 튜플:', tup)
+
+temp = sorted(list(tup))
+
+max_count = 1
+count = 1
+cur_value = max_value = temp[0]
+
+for i in range(1, len(temp)):
+    if temp[i] == cur_value: 
+        count += 1
+        if count > max_count or (count == max_count and cur_value > max_value):
+            max_count = count
+            max_value = cur_value
+    else: 
+        cur_value = temp[i]
+        count = 1
+
+print('가장 많이 나타나는 요소는:', max_value)
+
+과제 3-1
+menu = {
+    "Americano": 3000,
+    "Ice Americano": 3500,
+    "Cappuccino": 4000,
+    "Cafe Latte": 4500,
+    "Espresso": 3600
+}
+
+for key in menu:
+    print("{:16s}  가격 : {:,}원".format(key, menu[key]))
+
+과제 3-2
+menu = {
+    "Americano": 3000,
+    "Ice Americano": 3500,
+    "Cappuccino": 4000,
+    "Cafe Latte": 4500,
+    "Espresso": 3600
+}
+
+for key in menu:
+    print("{:16s}  가격 : {:,}원".format(key, menu[key]))
+
+choice = input("위의 메뉴중 하나를 선택하세요: ")
+
+if choice in menu:
+    print("{}는 {:,}원 입니다. 결제를 부탁합니다.".format(choice, menu[choice]))
+else:
+    print("미안합니다. {}는 메뉴에 없습니다.".format(choice))
+
